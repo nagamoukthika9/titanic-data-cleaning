@@ -9,49 +9,52 @@ Tools Used
 - Python
 - Pandas
 - NumPy
-- VS Code
+- Excel
 
 Dataset
 
-The Titanic dataset contains passenger information, including passenger class, survival status, age, sex, fare, and embarkation port.
+The project uses the Titanic dataset containing passenger information, including passenger class, survival status, age, fare, cabin, and embarkation details.
 
 Data Quality Issues Identified
 
 - Missing values in several columns
-- Missing age and fare values
-- Missing embarkation information
-- Duplicate row verification
-- Inconsistent text formatting and data types
+- Incomplete passenger information
+- Potential duplicate records
+- Inconsistent data formats and data types
 
-Cleaning Steps Performed
+Cleaning and Preprocessing
 
-- Checked missing values before and after cleaning
-- Removed duplicate rows, if present
-- Filled missing numerical values using the median
-- Handled missing categorical values
-- Standardized text values and data types
-- Exported the cleaned dataset to CSV and Excel files
+- Inspected missing values and data types
+- Removed duplicate rows
+- Filled missing age and fare values using the median
+- Handled missing categorical and other values according to the cleaning script
+- Exported the cleaned dataset to CSV and Excel formats
+- Recorded cleaning actions in a change log
 
 Project Files
 
-- "data/raw/titanic3.xls" — Original dataset
-- "data/cleaned/titanic_cleaned.csv" — Cleaned CSV dataset
-- "data/cleaned/titanic_cleaned.xlsx" — Cleaned Excel dataset
-- "reports/change_log.txt" — Record of cleaning changes
 - "clean_data.py" — Python cleaning script
-
-Results
-
-The original dataset contained 1,309 rows and 14 columns. After cleaning, the script reported zero missing values and zero duplicate rows.
+- "requirements.txt" — Required Python libraries
+- "titanic_cleaned.csv" — Cleaned dataset in CSV format
+- "titanic_cleaned.xlsx" — Cleaned dataset in Excel format
+- "change_log.txt" — Record of cleaning actions
 
 How to Run
 
 1. Install Python.
-2. Install the required libraries:
-   "python -m pip install pandas numpy xlrd openpyxl"
+
+2. Install dependencies:
+   
+   "python -m pip install -r requirements.txt"
+
 3. Run the script:
+   
    "python clean_data.py"
+
+Validation
+
+The script checks missing values and duplicate rows after cleaning. The final run reported zero missing values in the displayed columns and zero duplicate rows.
 
 Conclusion
 
-The project demonstrates basic data cleaning and preprocessing using Python and Pandas. The cleaned dataset is ready for further exploratory data analysis.
+The project demonstrates basic data cleaning and preprocessing using Python and Pandas. The cleaned dataset is prepared for further analysis.
